@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap-fruitshop</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+		body{
+			font-family: "Raleway", sans-serif;
+		}
+    .icon{
+      position: relative;
+      align-items: center;
+    }
+	</style>
+</head>
+<body>
+
+  <!-- Nav Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+  <div class="container">
+    <a class="navbar-brand" href="#" style="color: #81c408; font-size: 40px; font-weight: bolder;">Fruitables</a>
+    <button class="navbar-toggler position-sticky top-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="color: #81c408;"></span>
+    </button>
+    <div class="collapse navbar-collapse float-end" id="navbarNavDropdown">
+      <ul class="navbar-nav float-end" id="bar">
+        <li class="nav-item pe-4">
+          <a class="nav-link " id="tag" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item pe-4">
+          <a class="nav-link" id="tag" href="#">Shop</a>
+        </li>
+        <li class="nav-item pe-4">
+          <a class="nav-link" id="tag" href="#">Shop Details</a>
+        </li>
+        <li class="nav-item dropdown pe-4">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 20px;">
+            Pages
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Cart</a></li>
+            <li><a class="dropdown-item" href="#">ChechOut</a></li>
+            <li><a class="dropdown-item" href="#">Testimonial</a></li>
+            <li><a class="dropdown-item" href="#">404 page</a></li>
+          </ul>
+        </li>
+        <li class="nav-item pe-4">
+          <a class="nav-link" id="tag" href="#">Contact</a>
+        </li>
+      </ul>
+      <div class="icon">
+        <i class="fa-solid fa-magnifying-glass p-2" style="color: #81c408; height: 40px; width: 40px; font-size: 20px; border: solid 1px #ffb524; border-radius: 50%;"></i>
+        <i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; height: 40px; width: 40px; font-size: 30px;">
+          <span class="position-absolute top-0 start-50 badge text-dark rounded-circle" style="background-color:#ffb524; font-size: 10px;">3</span>
+        </i>
+        <i class="fa-solid fa-user p-2" style="color: #81c408; height: 40px; width: 40px; font-size: 30px;"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Home Page -->
+<div class="home p-lg-5 p-sm-2">
+  <div class="container">
+      <div class="row">
+       <div class="col-lg-6 col-md-6 col-12 p-lg-5 p-3" id="left">
+         <h3>100% Organic Foods</h3>
+         <h1>Organic Veggies & Fruits Foods</h1>
+         <div class="position-relative mx-auto">
+            <input class="form-control border-2 border w-100 py-3 px-4 rounded-pill" type="number" placeholder="Search" id="leftsearch">
+            <button type="submit" class="btn btn-primary border-2 border py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 0;" id="leftsubmit">Submit Now</button>
+          </div>
+       </div>
+       <div class="col-md-6 col-lg-6 col-12 p-lg-5 p-3">
+        <div class="slider">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="hero-img-1.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="tex">Vegitables</h5>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="hero-img-2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 class="tex">Fruits</h5>
+      </div>
+    </div>
+     </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+        </div>
+       </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features page -->
+<div class="features">
+  <div class="container">
+    <div class="row g-5" id="featurecard">
+      <div class="col-lg-3 col-md-6 col-12 rounded-3" id="featurecard1">
+        <div class="featureicon" >
+          <i class="fa-solid fa-car-side mx-auto mt-3 pt-1" style="color: white; font-size: 50px;"></i>
+        </div>
+        <h5 class="h4 text-center">Free Shipping</h5>
+        <p class="text-secondary text-center">Free on order over $300</p>
+      </div>
+      <div class="col-lg-3 col-md-6 rounded-3 col-12" id="featurecard1">
+         <div class="featureicon">
+          <i class="fa-solid fa-user-shield mx-auto mt-3 pt-1" style="color: white; font-size: 50px;"></i>
+        </div>
+        <h5>Security Payment</h5>
+        <p>100% security payment</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 rounded-3" id="featurecard1">
+         <div class="featureicon">
+          <i class="fa-solid fa-arrow-right-arrow-left mx-auto mt-3 pt-1" style="color: white; font-size: 50px;"></i>
+        </div>
+        <h5>30 Day Return</h5>
+        <p>30 day money guarantee</p>
+      </div>
+      <div class="col-lg-3 col-md-6 rounded-3 col-12" id="featurecard1">
+         <div class="featureicon text-center">
+          <i class="fa-solid fa-phone mx-auto mt-3 pt-1" style="color: white; font-size: 50px;"></i>
+        </div>
+        <h5>24/7 Support</h5>
+        <p>Support every time fast</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Prducts Page -->
+
+<div class="product p-lg-5 p-sm-2">
+  <div class="container">
+    <div class="row g-5 text-center align-middless" id="row1">
+      <div class="col-lg-4 col-12 p-2">
+        <h1>Our Organic Products</h1>
+      </div>
+      <div class="col-lg-8 col-12 p-2">
+        <button class="btn rounded-pill mx-lg-4 mx-sm-1" id="productbtn1">All Products</button>
+        <button class="btn rounded-pill mx-lg-4 mx-sm-1" id="productbtn">Vegitables</button>
+        <button class="btn rounded-pill mx-lg-4 mx-sm-1" id="productbtn">Fruits</button>
+        <button class="btn rounded-pill mx-lg-4 mx-sm-1" id="productbtn">Meat</button>
+        <button class="btn rounded-pill mx-lg-4 mx-sm-1" id="productbtn">Bread</button>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-xl-3 col-md-6 col-12 rounded-3" id="productcard">
+        
+  <div class="card overflow-hidden position-relative" id="cardbox">
+           <h5 class="card-header w-50 position-absolute top-0 start-0" id="cardhead">Fruits</h5>
+  <img src="fruite-item-1.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title fs-1 text-center text-secondary p-3">Oranges</h5>
+    <p class="card-text text-center text-secondary p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+              <h5 class="card-title text-secondary p-1 fs-3">$4.99 / kg</h5>
+    <a href="#" class="btn" id="cardbutton" ><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-4 col-xl-3 col-md-6 col-12 rounded-3" id="productcard">
+            
+<div class="card overflow-hidden position-relative" id="cardbox">
+           <h5 class="card-header w-50 position-absolute top-0 start-0" id="cardhead">Fruits</h5>
+            <div class="fruitimage">
+              <img src="fruite-item-2.jpg" class="card-img-top" alt="...">
+            </div>
+  <div class="card-body">
+    <h5 class="card-title text-secondary fs-1 text-center p-3">Rasberries</h5>
+    <p class="card-text text-center text-secondary p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+              <h5 class="card-title text-secondary p-1 text-secondary fs-3">$4.99 / kg</h5>
+    <a href="#" class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</a>
+  </div>
+</div>
+      </div>
+      <div class="col-lg-4 col-xl-3 col-md-6 col-12 rounded-3" id="productcard">
+      
+<div class="card mx-auto overflow-hidden position-relative" id="cardbox">
+           <h5 class="card-header w-50 position-absolute top-0 start-0" id="cardhead">Fruits</h5>
+            <div class="fruitimage">
+              <img src="fruite-item-3.jpg" class="card-img-top" alt="...">
+            </div>
+  <div class="card-body">
+    <h5 class="card-title fs-1 text-secondary text-center p-3">Banana</h5>
+    <p class="card-text text-center text-secondary p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+              <h5 class="card-title text-secondary p-1 text-secondary fs-3">$4.99 / kg</h5>
+    <a href="#" class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</a>
+  </div>
+</div>  
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 col-12 rounded-3" id="productcard">  
+        <div class="card overflow-hidden position-relative" id="cardbox">
+           <h5 class="card-header w-50 position-absolute top-0 start-0" id="cardhead">Fruits</h5>
+          <div class="fruitimage">
+            <img src="fruite-item-4.jpg" class="card-img-top" alt="..."></div>
+          <div class="card-body">
+          <h5 class="card-title fs-1 text-secondary text-center p-3">Apricots</h5>
+          <p class="card-text text-center text-secondary p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+              <h5 class="card-title p-1 fs-3 text-secondary text-secondary">$4.99 / kg</h5>
+           <a href="#" class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</a>
+        </div>
+      </div>  
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 col-12 rounded-3" id="productcard">   
+        <div class="card overflow-hidden position-relative" id="cardbox">
+           <h5 class="card-header w-50 position-absolute top-0 start-0" id="cardhead">Fruits</h5>
+            <div class="fruitimage">
+              <img src="fruite-item-5.jpg" class="card-img-top" alt="..."></div>
+            <div class="card-body">
+              <h5 class="card-title text-secondary fs-1 text-center p-3">Grapes</h5>
+              <p class="card-text text-secondary text-center p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+              <h5 class="card-title text-secondary p-1 fs-3 text-secondary">$4.99 / kg</h5>
+             <a href="#" class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</a>
+            </div>
+        </div>  
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 col-12 rounded-3" id="productcard">
+        <div class="card overflow-hidden position-relative" id="cardbox">
+           <h5 class="card-header w-50 position-absolute top-0 start-0" id="cardhead">Fruits</h5>
+            <div class="fruitimage">
+              <img src="fruite-item-6.jpg" class="card-img-top" alt="..."></div>
+            <div class="card-body">
+              <h5 class="card-title text-secondary text-center p-3 fs-1">Apple</h5>
+              <p class="card-text text-secondary text-center p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+              <h5 class="card-title text-secondary p-1 fs-3 text-secondary">$4.99 / kg</h5>
+              <a href="#" class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</a>
+            </div>
+        </div>  
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 col-12 rounded-3" id="productcard">
+        <div class="card overflow-hidden position-relative" id="cardbox">
+           <h5 class="card-header w-50 position-absolute top-0 start-0" id="cardhead">Fruits</h5>
+            <div class="fruitimage">
+              <img src="fruite-item-1.jpg" class="card-img-top" alt="..."></div>
+            <div class="card-body">
+              <h5 class="card-title text-secondary text-center fs-1 p-3">Oranges</h5>
+              <p class="card-text text-secondary text-center p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+              <h5 class="card-title text-secondary p-1 fs-3 text-secondary">$4.99 / kg</h5>
+              <a href="#" class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</a>
+            </div>
+        </div>  
+      </div>
+      <div class="col-xl-3 col-lg-4 col-md-6 col-12 rounded-3" id="productcard">
+        <div class="card overflow-hidden position-relative" id="cardbox">
+           <h5 class="card-header w-50 position-absolute top-0 start-0" id="cardhead">Fruits</h5>
+            <div class="fruitimage">
+            <img src="fruite-item-2.jpg" class="card-img-top" alt="..."></div>
+            <div class="card-body">
+              <h5 class="card-title text-secondary fs-1 text-center p-3">Rasberries</h5>
+              <p class="card-text text-secondary text-center p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+              <h5 class="card-title text-secondary p-1 fs-3 text-secondary">$4.99 / kg</h5>
+              <a href="#" class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</a>
+            </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Offers page -->
+<div class="offer p-lg-5 p-sm-2">
+  <div class="container">
+    <div class="titledeal">
+      <h1 class="text-center pt-lg-5 p-5">Deals Trending</h1>
+    </div>
+    <div class="row g-5 p-3">
+      <div class="col-lg-4 col-md-4 col-12 p-3">
+        <div class="card overflow-hidden">
+          <img src="featur-1.jpg" class="card-img-top" alt="...">
+          <div class="card-body position-relative" id="offercard1">
+            <div class="cardbox1 w-75 p-3 position-absolute top-0 start-50 translate-middle">
+              <h5 class="card-text text-light text-center p-1">Fresh Apples</h5>
+              <h3 class="card-text text-secondary text-center p-1">20% OFF</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12 p-3">
+        <div class="card overflow-hidden">
+          <img src="featur-2.jpg" class="card-img-top" alt="...">
+          <div class="card-body position-relative" id="offercard2">
+            <div class="cardbox2 w-75 p-3 position-absolute top-0 start-50 translate-middle">
+              <h5 class="card-text text-secondary text-center p-1">Tasty Fruits</h5>
+              <h3 class="card-text text-secondary text-center p-1">Free Delivery</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12 p-3">
+        <div class="card overflow-hidden">
+          <img src="featur-3.jpg" class="card-img-top" alt="...">
+          <div class="card-body position-relative" id="offercard3">
+            <div class="cardbox3 w-75 p-3 position-absolute top-0 start-50 translate-middle">
+              <h5 class="card-text text-light text-center p-1">Exotic Vegitables</h5>
+              <h3 class="card-text text-secondary text-center p-1">Discount 30$</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Vegitables Page -->
+<div class="vegitables p-sm-2 p-lg-5">
+  <div class="container">
+    <div class="titleveg">
+      <h1 class="text-center p-3 p-lg-5" style="color: #81c408;">Organic Vegetables</h1>
+    </div>
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6 col-12 rounded-3" id="productcard">   
+        <div class="card overflow-hidden position-relative" id="cardbox0">
+           <h5 class="card-header w-75 position-absolute top-0 end-0" id="cardhead1">vegetables</h5>
+            <div class="vegimage">
+              <img src="vegetable-item-1.jpg" class="card-img-top" alt="..."></div>
+            <div class="card-body">
+              <h5 class="card-title text-secondary fs-1 text-center p-3">Tomato</h5>
+              <p class="card-text text-secondary text-center p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+              <h5 class="card-title text-secondary p-1 fs-3 text-secondary">$4.99 / kg</h5>
+             <a href="#" class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</a>
+            </div>
+        </div>  
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 rounded-3" id="productcard">   
+        <div class="card overflow-hidden position-relative" id="cardbox0">
+           <h5 class="card-header w-75 position-absolute top-0 end-0" id="cardhead1">vegetables</h5>
+            <div class="vegimage">
+              <img src="vegetable-item-6.jpg" class="card-img-top" alt="..."></div>
+            <div class="card-body">
+              <h5 class="card-title text-secondary fs-1 text-center p-3">parsely</h5>
+              <p class="card-text text-secondary text-center p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+              <h5 class="card-title text-secondary p-1 fs-3 text-secondary">$4.99 / kg</h5>
+             <a href="#" class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</a>
+            </div>
+        </div>  
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 rounded-3" id="productcard">   
+        <div class="card overflow-hidden position-relative " id="cardbox0">
+           <h5 class="card-header w-75 position-absolute top-0 end-0" id="cardhead1">vegetables</h5>
+            <div class="vegimage">
+              <img src="vegetable-item-4.jpg" class="card-img-top" alt="..."></div>
+            <div class="card-body">
+              <h5 class="card-title text-secondary fs-1 text-center p-3">bell papper</h5>
+              <p class="card-text text-secondary text-center p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+              <h5 class="card-title text-secondary p-1 fs-3 text-secondary">$4.99 / kg</h5>
+             <a href="#" class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</a>
+            </div>
+        </div>  
+      </div>
+      <div class="col-lg-3 col-md-6 col-12 rounded-3" id="productcard">   
+        <div class="card overflow-hidden position-relative" id="cardbox0">
+           <h5 class="card-header w-75 position-absolute top-0 end-0" id="cardhead1">vegetables</h5>
+            <div class="vegimage">
+              <img src="vegetable-item-5.jpg" class="card-img-top" alt="..."></div>
+            <div class="card-body">
+              <h5 class="card-title text-secondary fs-1 text-center p-3">Potato</h5>
+              <p class="card-text text-secondary text-center p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te incididunt</p>
+              <h5 class="card-title text-secondary p-1 fs-3 text-secondary">$4.99 / kg</h5>
+             <a href="#" class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</a>
+            </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- buy page -->
+<div class="buy p-sm-2 p-lg-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12" id="buyfirst">
+        <h1>Fresh Exotic Fruits</h1>
+        <h3>in Our Store</h3>
+        <p>The generated Lorem Ipsum is therefore always free from repetition injected humour, or non-characteristic words etc.</p>
+        <button class="btn border-2 py-3 px-5 border-light">BUY</button>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="picture position-relative">
+          <div class="kg position-absolute">
+            <h1 class=" mt-4 p-3">1<sub>kg</sub><sup>50$</sup> </h1>
+          </div>
+          <img src="baner-1.png" class="img-fluid p-3">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Best seller page -->
+<div class="seller p-lg-5 p-sm-2 pt-5">
+  <div class="container">
+    <div class="title w-100 p-4">
+      <h1 class="text-center">Bestseller Products</h1>
+      <p class="text-center text-secondary">Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>
+    </div>
+    <div class="row g-3">
+      <div class="col-lg-6 col-xl-4">
+        <div class="card px-3" id="bestcard">
+          <div class="row d-flex">
+            <div class="col-6" id="bestimage">
+              <img src="best-product-1.jpg" class="img-fluid rounded-circle my-5" >
+            </div>
+            <div class="col-6">
+              <div class="card-body my-5 p-3">
+                <h5 class="card-title fs-4 p-1">Organic tomato</h5>
+                <div class="menuicon d-flex p-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h5 class="fs-4 p-1">3.12 $</h5>
+                <button class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4">
+        <div class="card px-3" id="bestcard">
+          <div class="row d-flex">
+            <div class="col-6" id="bestimage">
+              <img src="best-product-2.jpg" class="img-fluid rounded-circle my-5" >
+            </div>
+            <div class="col-6">
+              <div class="card-body my-5 p-3">
+                <h5 class="card-title fs-4 p-1">Organic tomato</h5>
+                <div class="menuicon d-flex p-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h5 class="fs-4 p-1">3.12 $</h5>
+                <button class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div><div class="col-lg-6 col-xl-4">
+        <div class="card px-3" id="bestcard">
+          <div class="row d-flex">
+            <div class="col-6" id="bestimage">
+              <img src="best-product-3.jpg" class="img-fluid rounded-circle my-5" >
+            </div>
+            <div class="col-6">
+              <div class="card-body p-3 my-5">
+                <h5 class="card-title fs-4 p-1">Organic tomato</h5>
+                <div class="menuicon d-flex p-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h5 class="fs-4 p-1">3.12 $</h5>
+                <button class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div><div class="col-lg-6 col-xl-4">
+        <div class="card px-3" id="bestcard">
+          <div class="row d-flex">
+            <div class="col-6" id="bestimage">
+              <img src="best-product-4.jpg" class="img-fluid rounded-circle my-5" >
+            </div>
+            <div class="col-6">
+              <div class="card-body p-3 my-5">
+                <h5 class="card-title fs-4 p-1">Organic tomato</h5>
+                <div class="menuicon d-flex p-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h5 class="fs-4 p-1">3.12 $</h5>
+                <button class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div><div class="col-lg-6 col-xl-4">
+        <div class="card mb-3 px-3" id="bestcard">
+          <div class="row d-flex">
+            <div class="col-6" id="bestimage">
+              <img src="best-product-5.jpg" class="img-fluid rounded-circle my-5" >
+            </div>
+            <div class="col-6">
+              <div class="card-body p-3 my-5">
+                <h5 class="card-title fs-4 p-1">Organic tomato</h5>
+                <div class="menuicon d-flex p-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h5 class="fs-4 p-1">3.12 $</h5>
+                <button class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-xl-4">
+        <div class="card mb-3 px-3" id="bestcard">
+          <div class="row d-flex">
+            <div class="col-6" id="bestimage">
+              <img src="best-product-6.jpg" class="img-fluid rounded-circle my-5" >
+            </div>
+            <div class="col-6">
+              <div class="card-body my-5 p-3">
+                <h5 class="card-title fs-4 p-1">Organic tomato</h5>
+                <div class="menuicon d-flex p-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h5 class="fs-4 p-1">3.12 $</h5>
+                <button class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12">
+        <div class="card mb-3" id="cardbest">
+              <img src="best-product-1.jpg" class="card-img-top rounded-1" id="cardimg" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center fs-4 p-1">Organic tomato</h5>
+                <div class="menuicon1 d-flex p-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h5 class="fs-4 text-center p-1">3.12 $</h5>
+                <div class="but"><button class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</button></div>
+                </div>
+              </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12">
+         <div class="card mb-3" id="cardbest">
+              <img src="best-product-2.jpg" class="card-img-top rounded-1" id="cardimg" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center fs-4 p-1">Organic tomato</h5>
+                <div class="menuicon1 d-flex p-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h5 class="fs-4 text-center p-1">3.12 $</h5>
+                <div class="but"><button class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</button></div>
+                </div>
+              </div>
+      
+      </div>
+      <div class="col-lg-3 col-md-3 col-12">
+ <div class="card mb-3" id="cardbest">
+              <img src="best-product-3.jpg" class="card-img-top rounded-1" id="cardimg" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center fs-4 p-1">Organic tomato</h5>
+                <div class="menuicon1 d-flex p-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h5 class="fs-4 text-center p-1">3.12 $</h5>
+                <div class="but"><button class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</button></div>
+                </div>
+              </div>
+      
+      </div>
+      <div class="col-lg-3 col-md-3 col-12">
+         <div class="card mb-3" id="cardbest">
+              <img src="best-product-4.jpg" class="card-img-top rounded-1" id="cardimg" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center fs-4 p-1">Organic tomato</h5>
+                <div class="menuicon1 d-flex p-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <h5 class="fs-4 text-center p-1">3.12 $</h5>
+                <div class="but"><button class="btn" id="cardbutton"><i class="fa-solid fa-bag-shopping p-1" style="color: #81c408; font-size: 15px;"></i>Add to cart</button></div>
+                </div>
+              </div>
+      
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Quality page -->
+<div class="quality">
+  <div class="container" id="quacontainer">
+    <div class="row p-4 g-4 border">
+      <div class="col-lg-6 col-xl-3 col-md-6 col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="qualityicon text-center"><i class="fa-solid fa-users py-2"></i></div>
+            <h4 class="card-title text-center py-2 fs-3" style="color: #81c408;">SATISFIED CUSTOMERS</h4>
+            <p class="card-text fs-2 py-2 fw-bold text-center" style="color: #45595b;">1963</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-xl-3 col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="qualityicon text-center"><i class="fa-solid fa-users py-2"></i></div>
+            <h4 class="card-title text-center py-2 fs-3" style="color: #81c408;">QUALITY OF SERVICE</h4>
+            <p class="card-text fs-2 py-2 fw-bold text-center" style="color: #45595b;">99%</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-xl-3 col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="qualityicon text-center"><i class="fa-solid fa-users py-2"></i></div>
+            <h4 class="card-title text-center py-2 fs-3" style="color: #81c408;">QUALITY CERTIFICATE</h4>
+            <p class="card-text fs-2 py-2 fw-bold text-center" style="color: #45595b;">33</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-xl-3 col-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="qualityicon text-center"><i class="fa-solid fa-users py-2"></i></div>
+            <h4 class="card-title text-center py-2 fs-3" style="color: #81c408;">AVAILABLE PRODUCTS</h4>
+            <p class="card-text fs-2 py-2 fw-bold text-center" style="color: #45595b;">789</p>
+          </div>
+      </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- Testimonial -->
+<div class="testimonial p-lg-5 p-sm-2">
+  <div class="container-fluid">
+    <div class="title p-4 ">
+      <h3 class="text-center" style="color: #81c408;;">Our Testimonial</h3>
+      <h1 class="text-center fw-bold">Our Client Saying!</h1>
+    </div>
+    <div class="row g-3">
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="card p-3 m-3" id="testcard" style="background-color: #f4f6f8;">
+          <div class="card-body">
+            <p class="p-2 border-bottom">Lorem ipsum is simply dummy text of the printing ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            <div class="cardbottom d-flex p-2">
+              <img src="testimonial-1.jpg" class="img-fluid rounded-2 ">
+              <div class="cardright p-2">
+                <h5 class="card-title fs-4 p-2">Client Name</h5>
+                <h5 class="fs-5 p-2">Profession</h5>
+                <div class="menuicon d-flex p-2">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="card m-3 p-3" id="testcard" style="background-color: #f4f6f8;">
+          <div class="card-body">
+            <p class="p-2 border-bottom">Lorem ipsum is simply dummy text of the printing ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+            <div class="cardbottom d-flex p-2">
+              <img src="testimonial-1.jpg" class="img-fluid rounded-2 ">
+              <div class="cardright p-2">
+                <h5 class="card-title fs-4 p-2">Client Name</h5>
+                <h5 class="fs-5 p-2">Profession</h5>
+                <div class="menuicon d-flex p-2">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer page -->
+<div class="footer p-lg-5 p-sm-2">
+  <div class="container">
+    <div class="row border-bottom" id="row">
+      <div class="col-lg-3 col-md-3 col-12">
+        <a href="#" style="color: #81c408; font-size: 40px; font-weight: 500; text-decoration: none;">Fruitables</a>
+        <p style="color: #ffb524; font-size: 18px;">Fresh products</p>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="position-relative mx-auto">
+          <input class="form-control border-2 border w-100 py-3 px-4 rounded-pill" type="number" placeholder="Your Email" id="footsearch">
+          <button type="submit" class="btn btn-primary border-2 border py-3 px-4 position-absolute rounded-pill text-white h-100" style="top: 0; right: 0;" id="footsearch1">Subscribe Now</button>
+          </div>
+       </div>
+        <div class="col-lg-3 col-md-3 col-12">
+          <div class="d-flex justify-content-end pt-3">
+          <a class="btn me-2 btn-md-square rounded-circle" id="circle" href=""><i class="fab fa-twitter"></i></a>
+          <a class="btn me-2 btn-md-square rounded-circle" id="circle" href=""><i class="fab fa-facebook-f"></i></a>
+          <a class="btn me-2 btn-md-square rounded-circle" id="circle" href=""><i class="fab fa-youtube"></i></a>
+          <a class="btn me-2 btn-md-square rounded-circle" id="circle" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    <div class="row g-5 my-1">
+      <div class="col-lg-3 col-md-3 col-12" id="foota">
+        <h3 class="text-light p-2 fs-4">Why People Like us!</h3>
+        <p>typesetting, remaining essentially unchanged. It was popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
+        <button class="btn px-4 py-2" id="footbut">Read More</button>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12" id="foota">
+        <h3 class="text-light p-2 fs-4">Shop Info</h3>
+        <a href="">About Us</a></br>
+        <a href="">Contact Us</a></br>
+        <a href="">Privacy Policy</a></br>
+        <a href="">Terms & Conditions</a></br>
+        <a href="">Return Policy</a></br>
+        <a href="">FAQ's & Help</a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12" id="foota">
+        <h3 class="text-light p-2 fs-4">Account</h3>
+        <a href="">My Account</a></br>
+        <a href="">Shop Details</a></br>
+        <a href="">Shopping Cart</a></br>
+        <a href="">Wishlist</a></br>
+        <a href="">Order History</a></br>
+        <a href="">International Orders</a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-12" id="foota">
+        <h3 class="text-light p-2 fs-4">Contact</h3>
+        <p>Address: 1429 Netus Rd, NY 48247</p>
+        <p>Email: Example@gmail.com</p>
+        <p>Phone: +0123 4567 8910</p>
+        <p>Payment Accepted</p>
+        <img src="payment.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap Script link -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</body>
+</html>
